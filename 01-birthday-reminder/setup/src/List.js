@@ -1,9 +1,13 @@
 import React from 'react';
+import Birthday from '../src/Birthday';
 
-const List = () => {
+const List = (props) => {
+  const listItems = props.people.map((e) => <li><Birthday person={e}/></li>)
   return (
     <>
-      <h2>list component</h2>
+      <ul>
+        {listItems}
+      </ul>
     </>
   );
 };
